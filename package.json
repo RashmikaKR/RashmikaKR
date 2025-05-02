@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://RashmikaKR.github.io/RashmikaKR",
+  "homepage": "https://rashmikakr.github.io/RashmikaKR",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
