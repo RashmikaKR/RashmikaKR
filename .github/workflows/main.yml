@@ -16,10 +16,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20  # Change this to 18 if you encounter issues with Node 20
 
       - name: Install dependencies
         run: npm install
+
+      - name: Fix Vite Permissions
+        run: chmod +x ./node_modules/.bin/vite  # Ensure Vite binary has execute permissions
 
       - name: Build project
         run: npm run build
