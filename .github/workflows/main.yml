@@ -13,10 +13,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Delete node_modules and package-lock.json
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20  # Change this to 18 if you encounter issues with Node 20
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
